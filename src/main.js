@@ -1,12 +1,12 @@
-let names = ['Mark', 'Jek', 'Meds', "Hemel"];
+/* Default parameters */
 
-// old
-/*names = names.map(function(name) {
-	return name + ' is cool.';
-});*/
+function defaultDiscountRate(){
+	return .10;
+}
 
-// new
-// names = names.map(name => name + ' is cool.');
-names = names.map(name => `${name} is cool.`);
 
-console.log(names);
+function applyDiscount(cost, discount = defaultDiscountRate()) {
+	return cost - (cost * discount); 
+}
+
+console.log(applyDiscount(100));
