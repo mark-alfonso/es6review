@@ -12,7 +12,7 @@ class User {
 		return 'foo';
 	}
 
-	set goo() {
+	set goo(name) {
 		return 'goo';
 	}
 
