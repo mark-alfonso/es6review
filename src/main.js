@@ -1,31 +1,15 @@
-/*let person = {
-	name: 'Karen',
-	age: 32
-}
-
-// object destructuring
-let {name, age} = person;
-
-console.log(age);*/
-
-/*let data  = {
-	name: 'Karen',
-	age: 32,
-	results: ['foo', 'bar'],
-	count: 30
-};
-
-function getDate(data) {
-	let { results, count } = data;
-	console.log(results, count);
-}
+/*
+Classes are first class citizen, they van be passed around
 */
 
-function greet({ name, age }) {
-	console.log(`Hello, ${name}, age ${age}`);
+function log(strategy) {
+	strategy.handle();
 }
 
-greet({
-	name: 'Mark',
-	age: 24
-});
+class ConsoleLogger {
+	handle() {
+		console.log('Using the alert strategy to log.');
+	}
+}
+
+log(new ConsoleLogger); 
