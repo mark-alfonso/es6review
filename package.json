@@ -1,9 +1,11 @@
 {
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-watch": "^2.0.7"
   },
   "scripts": {
-    "build": "babel src -d output"
+    "build": "babel src -d output",
+    "start": "babel-watch src/main.js"
   }
 }
