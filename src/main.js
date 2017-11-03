@@ -1,12 +1,23 @@
-/* Default parameters */
+ /* Rest */
 
-function defaultDiscountRate(){
-	return .10;
+function sum(...numbers) { // will put all the params to an array
+	return numbers.reduce(function(prev, current) {
+		return prev + current;
+	});
 }
 
+function sum(...numbers) {
+	return numbers.reduce(
+		(prev, current) => prev + current
+	);
+}
+//console.log(sum(1, 2, 3, 4, 5));
 
-function applyDiscount(cost, discount = defaultDiscountRate()) {
-	return cost - (cost * discount); 
+/* Spread */
+function mult(x, y) {
+	return x * y;
 }
 
-console.log(applyDiscount(100));
+let nums = [1, 2];
+
+console.log(mult(... nums));
